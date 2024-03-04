@@ -6,6 +6,7 @@ import time
 
 #main code
 engine = pyttsx3.init()
+engine.setProperty('voice', engine.getProperty('voices')[1].id)
 class speak:
     def __init__(self,text):
         self.text = text;
@@ -33,6 +34,8 @@ class recognize_speech(speak):
             print("Say that again please...")
             return "None"
         return query
+    
+     
 
 if __name__ == "__main__":
     obj = recognize_speech()
@@ -41,4 +44,6 @@ if __name__ == "__main__":
         speak = speak(query)
         speak.speak(query)
         if query != "None":
-            break
+            print("Try again sir")
+        else:
+            pass
