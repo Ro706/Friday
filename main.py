@@ -6,16 +6,14 @@ import time
 
 #main code
 engine = pyttsx3.init()
-engine.setProperty('voice', engine.getProperty('voices')[1].id)
-class speak:
-    def __init__(self,text):
-        self.text = text;
+# engine.setProperty('voice', engine.getProperty('voices')[1].id)
+def speak(text):
+    engine.setProperty('voice', engine.getProperty('voices')[1].id)
     # Function to speak text
-    def speak(self,text):
-        engine.say(self.text)
-        engine.runAndWait()
+    engine.say(text)
+    engine.runAndWait()
     
-class recognize_speech(speak):
+class recognize_speech:
     def __init__(self):
         self.r = sr.Recognizer()
     def listen(self):
@@ -41,9 +39,5 @@ if __name__ == "__main__":
     obj = recognize_speech()
     while True:
         query = obj.listen()
-        speak = speak(query)
-        speak.speak(query)
-        if query != "None":
-            print("Try again sir")
-        else:
-            pass
+        speak(query)
+    
