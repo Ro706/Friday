@@ -40,4 +40,6 @@ if __name__ == "__main__":
     while True:
         query = obj.listen()
         speak(query)
+        if(query == "exit"):
+            break
     
