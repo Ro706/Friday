@@ -2,6 +2,8 @@
 import speech_recognition as sr
 import pyttsx3 
 import time 
+import core.wishme as wish 
+import core.weather as weather
 
 
 #main code
@@ -33,13 +35,22 @@ class recognize_speech:
             return "None"
         return query
     
-     
-
 if __name__ == "__main__":
     obj = recognize_speech()
+    wish.wishme()
+    
     while True:
         query = obj.listen()
         speak(query)
-        if(query == "exit"):
+        name = query
+        if "weather" in query:
+            weather.weather("Nagpur")
+        elif "time" in query:
+            time = time.strftime("%I:%M")
+            speak(time)
+        elif "hello" in query:
+            speak(f"hello ,{name}")
+        elif(query == "exit"):
             break
+        
     
