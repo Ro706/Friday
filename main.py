@@ -42,14 +42,11 @@ if __name__ == "__main__":
     while True:
         query = obj.listen()
         speak(query)
-        name = query
         if "weather" in query:
             weather.weather("Nagpur")
         elif "time" in query:
             time = time.strftime("%I:%M")
             speak(time)
-        elif "hello" in query:
-            speak(f"hello ,{name}")
         elif(query == "exit"):
             break
         
