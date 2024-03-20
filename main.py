@@ -53,6 +53,8 @@ if __name__ == "__main__":
             speak(time)
         elif "hello" in query:
             wish.wishme()
+        elif "how r u" in query:
+            speak("I'm Fine! How can I help you")
         elif(query == "exit"):
             exit(0)
         
