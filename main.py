@@ -43,7 +43,11 @@ if __name__ == "__main__":
         query = obj.listen()
         speak(query)
         if "weather" in query:
-            weather.weather("Nagpur")
+            weather.tellmeTodaysWeather()
+        elif "date" in query:
+            date = time.strftime("%d-%m-%Y")
+            print(date)
+            speak(f"todays date is {date}")
         elif "time" in query:
             time = time.strftime("%I:%M")
             speak(time)
