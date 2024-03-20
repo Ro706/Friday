@@ -52,6 +52,6 @@ if __name__ == "__main__":
             time = time.strftime("%I:%M")
             speak(time)
         elif(query == "exit"):
-            break
+            exit(0)
         
     
