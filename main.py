@@ -51,6 +51,8 @@ if __name__ == "__main__":
         elif "time" in query:
             time = time.strftime("%I:%M")
             speak(time)
+        elif "hello" in query:
+            wish.wishme()
         elif(query == "exit"):
             exit(0)
         
