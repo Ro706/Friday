@@ -17,7 +17,7 @@ class news:
         news_article=[]
         for arti in article:
             news_article.append(arti["title"])
-        for i in range(len(news_article)):
+        for i in range(len(news_article)-15):
             a=i+1,news_article[i]
             print (i+1,news_article[i])
             speak(news_article[i])

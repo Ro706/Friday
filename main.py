@@ -30,7 +30,7 @@ class recognize_speech:
         try:
             print("Recognizing...")
             query = self.r.recognize_google(audio, language='en-in')
-            print(f"User said: {query}\n")
+            # print(f"User said: {query}\n")
 
         except Exception as e:
             print(e)
@@ -48,7 +48,7 @@ if __name__ == "__main__":
         if "weather" in query:
             weather.tellmeTodaysWeather()
         elif "date" in query:
-            date = time.strftime("%d-%m-%Y")
+            date = time.strftime("%d %m %Y")
             print(date)
             speak(f"todays date is {date}")
         elif "time" in query:
