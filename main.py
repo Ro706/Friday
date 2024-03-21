@@ -3,8 +3,10 @@ import speech_recognition as sr
 import pyttsx3 
 import time 
 import os
+import core.news as news
 import core.wishme as wish 
 import core.weather as weather
+
 
 
 #main code
@@ -58,5 +60,7 @@ if __name__ == "__main__":
             os.system("spotify")
         elif "notepad" in query:
             os.system("notepad")
+        elif "news" in query:
+             news.news_report()
         elif "exit" in query:
             exit(0)
