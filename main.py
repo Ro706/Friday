@@ -2,6 +2,7 @@
 import speech_recognition as sr
 import pyttsx3 
 import time 
+import os
 import core.wishme as wish 
 import core.weather as weather
 
@@ -53,7 +54,9 @@ if __name__ == "__main__":
             speak(time)
         elif "hello" in query:
             wish.wishme()
-        elif(query == "exit"):
+        elif "spotify" in query:
+            os.system("spotify")
+        elif "exit" in query:
             exit(0)
         
     
