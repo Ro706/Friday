@@ -54,9 +54,15 @@ if __name__ == "__main__":
             speak(time)
         elif "hello" in query:
             wish.wishme()
+<<<<<<< HEAD
         elif "spotify" in query:
             os.system("spotify")
         elif "exit" in query:
+=======
+        elif "how r u" in query:
+            speak("I'm Fine! How can I help you")
+        elif(query == "exit"):
+>>>>>>> e43627ae0c055e60d6d52a27ccccaf1920b437b5
             exit(0)
         
     
